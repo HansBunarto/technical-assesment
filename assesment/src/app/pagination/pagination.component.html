@@ -1,0 +1,13 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item" [class.disabled]="pageIndex === 1">
+            <a class="page-link" title="Go to previous page" (click)="pageChangeBackward()"><i class="fa fa-chevron-left"></i></a>
+        </li>
+        <li class="page-item" [class.active]="no === pageIndex" *ngFor="let no of totalPageNo">
+            <a class="page-link" title="You are on page no {{no}}" (click)="pageChangeIndex(no)">{{no}}</a>
+        </li>
+        <li class="page-item" [class.disabled]="pageIndex === totalSizeOfPages">
+            <a class="page-link" title="Go to next page" (click)="pageChangeForward()"><i class="fa fa-chevron-right"></i></a>
+        </li>
+    </ul>
+</nav>
