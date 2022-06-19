@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="row mt-3 px-3">
-        <table class="table table-responsive table-striped" style="min-height: 500px; max-height: 570px;font-size: 16px ">
+        <table class="table table-responsive table-striped" style="min-height: 450px; max-height: 570px;font-size: 16px ">
             <thead style="position: sticky;top: 0; background-color: #eee;">
               <tr>
                 <th scope="col" class="font-weight-normal pr-0" (click)="sortUsername(ascending)">
@@ -56,7 +56,9 @@
                 </tr>
             </tbody>
         </table>
-        <div class="d-flex justify-content-center">
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
             <app-pagination *ngIf="search === ''" [pageIndex]="pageIndex" [limit]="pageSize" [total]="count" (pageChange)="pageChanged($event)"></app-pagination>
         </div>
     </div>

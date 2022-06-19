@@ -21,14 +21,14 @@ export class ListEmployeeComponent implements OnInit {
 
   constructor(private router: Router) {
     this.pageIndex = 1;
-    this.pageSize = 10;
+    this.pageSize = 15;
     this.pageDifference = this.pageSize - this.pageIndex;
     this.pageEndRange = this.pageIndex * this.pageSize;
     this.data = [];
   }
 
   ngOnInit(): void {
-    this.getAll();
+    this.pageChanged(1);
     var search = localStorage.getItem("search");
     if(search) {
       this.search = search;
@@ -67,13 +67,13 @@ export class ListEmployeeComponent implements OnInit {
     this.data = searchList;
 
     if(this.search === "") {
-      this.getAll();
+      this.pageChanged(1);
     }
   }
 
   public removeData(index: number) {
     this.listEmployee.splice(index, 1);
-    this.getAll();
+    this.pageChanged(1);
   }
 
   public logout() {
