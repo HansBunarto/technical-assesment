@@ -19,7 +19,7 @@ in terminal Run `cd technical-assesment` to change the directory
 you must install the package.json first before you run this project. you can run `npm install` in terminal
 
 ## after installed the package
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## congrats
 your clone project repository already work
